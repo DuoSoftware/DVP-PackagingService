@@ -29,7 +29,7 @@ module.exports = {
     resource: "cluster",
     vdomain: "localhost",
     domain: "localhost",
-    port: "9004",
+    port: "9005",
     version: "1.0.0.0"
   },
 

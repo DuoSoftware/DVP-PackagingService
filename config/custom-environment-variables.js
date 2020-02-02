@@ -37,7 +37,7 @@ module.exports = {
   Host: {
     vdomain: "LB_FRONTEND",
     domain: "HOST_NAME",
-    port: "HOST_ORGANIZATIONSERVICE_PORT",
+    port: "HOST_PACKAGINGSERVICE_PORT",
     version: "HOST_VERSION"
   },
 
