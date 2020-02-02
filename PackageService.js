@@ -12,7 +12,7 @@ var EventEmitter = require('events').EventEmitter;
 var Console = require('dvp-mongomodels/model/Console');
 var messageFormatter = require('dvp-common-lite/CommonMessageGenerator/ClientMessageJsonFormatter.js');
 var deepcopy = require('deepcopy');
-//var dbConn = require('dvp-dbmodels');
+var dbConn = require('dvp-dbmodels');
 
 var redisip = config.Redis.ip;
 var redisport = config.Redis.port;
@@ -533,4 +533,4 @@ module.exports.GetAllActiveCodec = GetAllActiveCodec;
 module.exports.GetCodecByType = GetCodecByType;
 
 module.exports.RedisCon = client;
-//module.exports.DbConn = dbConn.SequelizeConn;
+module.exports.DbConn = dbConn.SequelizeConn;

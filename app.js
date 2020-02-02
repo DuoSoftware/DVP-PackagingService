@@ -7,10 +7,10 @@ var session = require('express-session');
 var cors = require('cors');
 var app = express();
 
-var logger = require('dvp-common-lite/LogHandler/CommonLogHandler').logger;
+var logger = require('dvp-common-lite/LogHandler/CommonLogHandler.js').logger;
 var config = require('config');
 var jwt = require('restify-jwt');
-var secret = require('dvp-common-lite/Authentication/Secret');
+var secret = require('dvp-common-lite/Authentication/Secret.js');
 var authorization = require('dvp-common-lite/Authentication/Authorization.js');
 var healthcheck = require('dvp-healthcheck/DBHealthChecker');
 var mongomodels = require('dvp-mongomodels');
@@ -36,7 +36,7 @@ app.use(errorhandler({dumpExceptions: true, showStack: true}));
 app.use(cors());
 app.use(jwt({secret: secret.Secret}));
 
-var hc = new healthcheck(app, {redis: packageService.RedisCon, mongo: mongomodels.connection});
+var hc = new healthcheck(app, {redis: packageService.RedisCon, pg: packageService.DbConn, mongo: mongomodels.connection});
 hc.Initiate();
 
 
