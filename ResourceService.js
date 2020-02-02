@@ -1,9 +1,9 @@
 /**
  * Created by Heshan.i on 6/7/2016.
  */
-var logger = require('dvp-common/LogHandler/CommonLogHandler.js').logger;
+var logger = require('dvp-common-lite/LogHandler/CommonLogHandler.js').logger;
 var Resource = require('dvp-mongomodels/model/Resource');
-var messageFormatter = require('dvp-common/CommonMessageGenerator/ClientMessageJsonFormatter.js');
+var messageFormatter = require('dvp-common-lite/CommonMessageGenerator/ClientMessageJsonFormatter.js');
 
 function GetResources(req, res){
     logger.debug("DVP-UserService.GetResources Internal method ");

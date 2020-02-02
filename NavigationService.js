@@ -1,12 +1,12 @@
 /**
  * Created by Heshan.i on 6/8/2016.
  */
-var logger = require('dvp-common/LogHandler/CommonLogHandler.js').logger;
+var logger = require('dvp-common-lite/LogHandler/CommonLogHandler.js').logger;
 var Resource = require('dvp-mongomodels/model/Resource');
 var Navigation = require('dvp-mongomodels/model/Navigation');
 var Console = require('dvp-mongomodels/model/Console');
 var EventEmitter = require('events').EventEmitter;
-var messageFormatter = require('dvp-common/CommonMessageGenerator/ClientMessageJsonFormatter.js');
+var messageFormatter = require('dvp-common-lite/CommonMessageGenerator/ClientMessageJsonFormatter.js');
 var Org = require('dvp-mongomodels/model/Organisation');
 
 function GetResources(resources) {

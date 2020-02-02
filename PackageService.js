@@ -3,16 +3,16 @@
  */
 var redis = require('ioredis');
 var config = require('config');
-var logger = require('dvp-common/LogHandler/CommonLogHandler.js').logger;
+var logger = require('dvp-common-lite/LogHandler/CommonLogHandler.js').logger;
 var Resource = require('dvp-mongomodels/model/Resource');
 var VPackage = require('dvp-mongomodels/model/Package');
 var PackageUnit = require('dvp-mongomodels/model/PackageUnit');
 var Codec = require('dvp-mongomodels/model/Codec').Codec;
 var EventEmitter = require('events').EventEmitter;
 var Console = require('dvp-mongomodels/model/Console');
-var messageFormatter = require('dvp-common/CommonMessageGenerator/ClientMessageJsonFormatter.js');
+var messageFormatter = require('dvp-common-lite/CommonMessageGenerator/ClientMessageJsonFormatter.js');
 var deepcopy = require('deepcopy');
-var dbConn = require('dvp-dbmodels');
+//var dbConn = require('dvp-dbmodels');
 
 var redisip = config.Redis.ip;
 var redisport = config.Redis.port;
@@ -533,4 +533,4 @@ module.exports.GetAllActiveCodec = GetAllActiveCodec;
 module.exports.GetCodecByType = GetCodecByType;
 
 module.exports.RedisCon = client;
-module.exports.DbConn = dbConn.SequelizeConn;
+//module.exports.DbConn = dbConn.SequelizeConn;

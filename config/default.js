@@ -1,13 +1,4 @@
 module.exports = {
-  DB: {
-    Type: "<VALUE>",
-    User: "<VALUE>",
-    Password: "<VALUE>",
-    Port: 0,
-    Host: "<VALUE>",
-    Database: "<VALUE>"
-  },
-
   Redis: {
     mode: "<VALUE>", //instance, cluster, sentinel
     ip: "<VALUE>",
@@ -49,32 +40,5 @@ module.exports = {
     password: "<VALUE>",
     user: "<VALUE>",
     replicaset: "<VALUE>"
-  },
-  Services: {
-    accessToken: "<VALUE>",
-    resourceServiceHost: "<VALUE>",
-    resourceServicePort: "<VALUE>",
-    resourceServiceVersion: "<VALUE>",
-    sipuserendpointserviceHost: "<VALUE>",
-    sipuserendpointservicePort: "<VALUE>",
-    sipuserendpointserviceVersion: "<VALUE>",
-    clusterconfigserviceHost: "<VALUE>",
-    clusterconfigservicePort: "<VALUE>",
-    clusterconfigserviceVersion: "<VALUE>",
-    billingserviceHost: "<VALUE>",
-    billingservicePort: "<VALUE>",
-    billingserviceVersion: "<VALUE>",
-    liteticketHost: "<VALUE>",
-    liteticketPort: "<VALUE>",
-    liteticketVersion: "<VALUE>",
-    fileserviceHost: "<VALUE>",
-    fileservicePort: "<VALUE>",
-    fileserviceVersion: "<VALUE>"
-  },
-
-  Tenant: {
-    activeTenant: 0
-  },
-  ClusterName: "Test",
-  Provision: 1
+  }
 };
