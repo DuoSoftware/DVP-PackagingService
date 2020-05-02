@@ -1,44 +1,52 @@
 module.exports = {
   Redis: {
-    mode: "<VALUE>", //instance, cluster, sentinel
-    ip: "<VALUE>",
+    mode: "instance", //instance, cluster, sentinel
+    ip: "",
     port: 6379,
-    user: "<VALUE>",
-    password: "<VALUE>",
+    user: "",
+    password: "",
     sentinels: {
-      hosts: "<VALUE>",
-      port: 0,
-      name: "<VALUE>"
+      hosts: "SENTNELS_URL",
+      port: 16389,
+      name: "redis-cluster"
     }
   },
-
   Security: {
-    ip: "<VALUE>",
-    port: 0,
-    user: "<VALUE>",
-    password: "<VALUE>",
-    mode: "<VALUE>", //instance, cluster, sentinel
+    mode: "instance", //instance, cluster, sentinel
+    ip: "",
+    port: 6379,
+    user: "",
+    password: "",
     sentinels: {
-      hosts: "<VALUE>",
-      port: 0,
-      name: "<VALUE>"
+      hosts: "SENTNELS_URL",
+      port: 16389,
+      name: "redis-cluster"
     }
   },
-
   Host: {
-    resource: "cluster",
+    profilesearch: "secondary",
     vdomain: "localhost",
     domain: "localhost",
-    port: "9005",
+    port: "3638",
     version: "1.0.0.0"
   },
-
+  RabbitMQ: {
+    ip: "",
+    port: 5672,
+    user: "",
+    password: "",
+    vhost: "/"
+  },
   Mongo: {
-    ip: "<VALUE>",
-    port: "<VALUE>",
-    dbname: "<VALUE>",
-    password: "<VALUE>",
-    user: "<VALUE>",
-    replicaset: "<VALUE>"
+    ip: "",
+    port: "27017",
+    dbname: "dvpdb",
+    password: "",
+    user: "",
+    type: "mongodb+srv"
+  },
+  LBServer: {
+    ip: "LB_FRONTEND",
+    port: "LB_PORT"
   }
 };
