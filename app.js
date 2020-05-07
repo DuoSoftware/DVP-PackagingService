@@ -45,7 +45,7 @@ app.use(passport.session());
 app.use(cookieParser());
 app.use(errorhandler({ dumpExceptions: true, showStack: true }));
 app.use(cors());
-app.use(jwt({ secret: secret.Secret })).unless({path: ['/healthcheck']});
+app.use(jwt({ secret: secret.Secret }).unless({path: ['/healthcheck']}));
 
 var hc = new healthcheck(app, {
   redis: packageService.RedisCon,
