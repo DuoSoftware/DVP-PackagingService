@@ -25,16 +25,27 @@ module.exports = {
     }
   },
 
+    
+  RabbitMQ: {
+    ip: "SYS_RABBITMQ_HOST",
+    port: "SYS_RABBITMQ_PORT",
+    user: "SYS_RABBITMQ_USER",
+    password: "SYS_RABBITMQ_PASSWORD",
+    vhost: "SYS_RABBITMQ_VHOST"
+  },
+
   Mongo: {
     ip: "SYS_MONGO_HOST",
     port: "SYS_MONGO_PORT",
     dbname: "SYS_MONGO_DB",
     password: "SYS_MONGO_PASSWORD",
     user: "SYS_MONGO_USER",
+    type: "SYS_MONGO_TYPE",
     replicaset: "SYS_MONGO_REPLICASETNAME"
   },
 
   Host: {
+    profilesearch: "EXTERNAL_PROFILE_SEARCH",
     vdomain: "LB_FRONTEND",
     domain: "HOST_NAME",
     port: "HOST_PACKAGINGSERVICE_PORT",
